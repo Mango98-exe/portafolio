@@ -1,0 +1,11 @@
+@media (max-width: 975px){
+    .seccion.active {
+        display: block;
+        margin: 0px auto;
+        width: 55%;
+    }    
+
+    /*.sobremi-img{
+        width: 450px;
+    }*/
+}

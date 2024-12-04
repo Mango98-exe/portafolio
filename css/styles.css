@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}
+
+.abrir-menu {
+    display: block;
+    top: 0;
+    left: 0;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1001;
+    background-color: transparent;
+    color: white;
+}
+
+.cerrar-menu {
+    display: block;
+    position: absolute;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+    background-color: transparent;
+    color: white;
+}
+
+
+.navbar {
+    transform: translateX(-100%);
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    display: flex;
+    padding: 10px 0;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    transform: translateX(-100%); /* Esconde el navbar fuera de la pantalla */
+    transition: transform 0.7s ease-in-out;
+    z-index: 1000;
+    padding-top: 50px;
+    
+}
+
+
+
+.nav-radio {
+    display: none;
+}
+.navbar.open {
+    transform: translateX(0); /* Muestra el navbar */
+}
+
+
+.navbar-item {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-top: 15px;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.3s;
+}
+
+.navbar-item.none {
+   
+    display: none;
+}
+
+.navbar-item:hover {
+    background-color: #9e053b;
+    border-radius: 4px;
+}
+
+.seccion {
+    display: none; /* Oculta todas las secciones por defecto */
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    max-width: 800px;
+    margin-left: 100px;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+}
+
+.seccion.active {
+    display: block; /* Muestra la sección activa */
+}
+
+.sobremi-img{
+    width: 85%;
+}
+
+textarea {
+    width: 80%;
+}
+
+#nombre{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 80%;
+    border-radius: 10px;
+    height: 23px;
+}
+#email{
+    width: 80%;
+    margin-top: 10px;
+    border-radius: 10px;
+    height: 23px;
+}
+
+#formulario > textarea{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+/* Media queries para dispositivos móviles */
+@media screen and (max-width: 100%) {
+    .abrir-menu {
+        display: none; /* Ocultar la hamburguesa en escritorio */
+    }
+    .navbar {
+        padding-top: 70px; 
+        transform: none; 
+        position: relative;
+        width: 20%;
+        height: auto;
+        padding-top: 0;
+    }
+}
